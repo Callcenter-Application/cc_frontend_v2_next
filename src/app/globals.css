@@ -7,8 +7,8 @@
 }
 
 :root {
-  --background: #F4F2EF;
-  --foreground: #1F1C1E;
+  --background: #F0F6FC;
+  --foreground: #10273D;
 }
 
 body {
@@ -18,10 +18,12 @@ body {
   margin: 0;
 }
 
-a {
-  color: #5E4459;
-}
+@layer base {
+  a {
+    color: #1D5F96;
+  }
 
-a:hover {
-  color: #3F2D3C;
+  a:hover {
+    color: #14466F;
+  }
 }

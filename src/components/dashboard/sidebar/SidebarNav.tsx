@@ -35,7 +35,7 @@ export const DEFAULT_SIDEBAR_ITEMS: NavItem[] = [
 
 export const SidebarNav: React.FC<SidebarNavProps> = ({
   items = DEFAULT_SIDEBAR_ITEMS,
-  accent = '#6E4F68',
+  accent = '#2B7BC0',
   className = '',
 }) => {
   const pathname = usePathname();

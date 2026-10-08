@@ -8,7 +8,7 @@ export interface SidebarLogoProps {
 }
 
 export const SidebarLogo: React.FC<SidebarLogoProps> = ({
-  accent = '#6E4F68',
+  accent = '#2B7BC0',
   className = '',
 }) => {
   return (
@@ -22,7 +22,7 @@ export const SidebarLogo: React.FC<SidebarLogoProps> = ({
       >
         <PhoneIcon className="w-[18px] h-[18px] stroke-white" />
       </div>
-      <span className="text-[18px] font-semibold tracking-[-0.01em] text-[#E9E5E8]">
+      <span className="text-[18px] font-semibold tracking-[-0.01em] text-[#10273D]">
         CallBook
       </span>
     </Link>

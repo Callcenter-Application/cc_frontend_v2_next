@@ -17,16 +17,16 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   subtitle = 'Manage supervisors, agents and administrators',
   actionLabel = 'Create user',
   onActionClick,
-  accent = '#6E4F68',
+  accent = '#2B7BC0',
   className = '',
 }) => {
   return (
     <div className={`flex flex-wrap items-center gap-3 p-1 ${className}`}>
       <div className="flex flex-col gap-[2px] mr-auto">
-        <h1 className="m-0 text-[26px] font-semibold tracking-[-0.015em] text-[#1F1C1E]">
+        <h1 className="m-0 text-[26px] font-semibold tracking-[-0.015em] text-[#10273D]">
           {title}
         </h1>
-        <span className="text-[14px] text-[#6B6560]">{subtitle}</span>
+        <span className="text-[14px] text-[#50677D]">{subtitle}</span>
       </div>
       <button
         type="button"

@@ -13,10 +13,10 @@ export const SidebarQueueHealth: React.FC<SidebarQueueHealthProps> = ({
 }) => {
   return (
     <div
-      className={`mt-auto p-[14px_12px] rounded-[10px] bg-[#332F32] flex flex-col gap-1 ${className}`}
+      className={`mt-auto p-[14px_12px] rounded-[10px] bg-[#C7DEF2] flex flex-col gap-1 ${className}`}
     >
-      <span className="text-[12px] text-[#B9B2B7]">{data.title}</span>
-      <span className="text-[14px] font-medium text-white">{data.statusText}</span>
+      <span className="text-[12px] text-[#3F5F7C]">{data.title}</span>
+      <span className="text-[14px] font-medium text-[#10273D]">{data.statusText}</span>
     </div>
   );
 };

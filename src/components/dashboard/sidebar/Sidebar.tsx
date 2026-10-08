@@ -14,14 +14,14 @@ export interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
-  accent = '#6E4F68',
+  accent = '#2B7BC0',
   navItems,
   queueHealth,
   className = '',
 }) => {
   return (
     <aside
-      className={`flex-[1_0_220px] max-w-full box-border bg-[#262325] text-[#E9E5E8] p-[24px_16px] flex flex-col gap-[28px] ${className}`}
+      className={`flex-[1_0_220px] max-w-full box-border bg-[#DCEBF8] text-[#10273D] p-[24px_16px] flex flex-col gap-[28px] ${className}`}
     >
       <SidebarLogo accent={accent} />
       <SidebarNav items={navItems} accent={accent} />

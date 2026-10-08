@@ -21,7 +21,7 @@ export const RoleFilterTabs: React.FC<RoleFilterTabsProps> = ({
     <div
       role="group"
       aria-label="Filter by role"
-      className={`flex flex-wrap gap-1 bg-[#EAE6E2] rounded-lg p-[3px] self-start max-w-full ${className}`}
+      className={`flex flex-wrap gap-1 bg-[#DCEBF8] rounded-lg p-[3px] self-start max-w-full ${className}`}
     >
       {tabs.map((t) => {
         const isActive = activeFilter === t.key;
@@ -34,12 +34,12 @@ export const RoleFilterTabs: React.FC<RoleFilterTabsProps> = ({
             aria-pressed={isActive}
             className={`h-[38px] px-[14px] border-0 rounded-[6px] text-[14px] cursor-pointer inline-flex items-center gap-2 transition-colors select-none ${
               isActive
-                ? 'bg-white text-[#1F1C1E] font-medium shadow-xs'
-                : 'bg-transparent text-[#4A4447] hover:text-[#1F1C1E]'
+                ? 'bg-white text-[#10273D] font-medium shadow-xs'
+                : 'bg-transparent text-[#34506A] hover:text-[#10273D]'
             }`}
           >
             <span>{t.label}</span>
-            <span className="font-mono text-[12px] text-[#6B6560]">{t.count}</span>
+            <span className="font-mono text-[12px] text-[#50677D]">{t.count}</span>
           </button>
         );
       })}

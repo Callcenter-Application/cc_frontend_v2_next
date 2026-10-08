@@ -18,7 +18,7 @@ export interface UsersViewProps {
 }
 
 export const UsersView: React.FC<UsersViewProps> = ({
-  accent = '#6E4F68',
+  accent = '#2B7BC0',
   initialUsers,
   searchQuery: externalSearchQuery,
   onCreateUser,
@@ -53,7 +53,7 @@ export const UsersView: React.FC<UsersViewProps> = ({
       />
 
       {/* Main card */}
-      <main className="flex-1 min-h-0 overflow-y-auto bg-white border border-[#E2DDD8] rounded-xl p-5 flex flex-col gap-5 min-w-0 ">
+      <main className="flex-1 min-h-0 overflow-y-auto bg-white border border-[#D6E4F0] rounded-xl p-5 flex flex-col gap-5 min-w-0 ">
         {/* Stats */}
         <StatsGrid stats={stats} />
 

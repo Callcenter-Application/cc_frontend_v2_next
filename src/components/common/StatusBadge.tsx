@@ -16,7 +16,7 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({ status, className = ''
   const dotColorClass = STATUS_DOT_CLASSES[status] ?? 'bg-gray-400';
 
   return (
-    <span className={`inline-flex items-center gap-[6px] text-[13px] text-[#1F1C1E] ${className}`}>
+    <span className={`inline-flex items-center gap-[6px] text-[13px] text-[#10273D] ${className}`}>
       <span className={`w-2 h-2 rounded-full inline-block shrink-0 ${dotColorClass}`} />
       <span>{status}</span>
     </span>

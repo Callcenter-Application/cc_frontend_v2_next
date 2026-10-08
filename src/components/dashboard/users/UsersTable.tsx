@@ -21,26 +21,26 @@ export const UsersTable: React.FC<UsersTableProps> = ({
     >
       <table className="w-full min-w-[760px] border-collapse text-[14px]">
         <thead>
-          <tr className="text-left text-[#6B6560] text-[12px] uppercase tracking-[0.04em]">
-            <th className="font-medium py-[10px] pr-3 pl-0 border-b border-[#E2DDD8]">
+          <tr className="text-left text-[#50677D] text-[12px] uppercase tracking-[0.04em]">
+            <th className="font-medium py-[10px] pr-3 pl-0 border-b border-[#D6E4F0]">
               User
             </th>
-            <th className="font-medium py-[10px] px-3 border-b border-[#E2DDD8]">
+            <th className="font-medium py-[10px] px-3 border-b border-[#D6E4F0]">
               ID
             </th>
-            <th className="font-medium py-[10px] px-3 border-b border-[#E2DDD8]">
+            <th className="font-medium py-[10px] px-3 border-b border-[#D6E4F0]">
               Role
             </th>
-            <th className="font-medium py-[10px] px-3 border-b border-[#E2DDD8]">
+            <th className="font-medium py-[10px] px-3 border-b border-[#D6E4F0]">
               Team
             </th>
-            <th className="font-medium py-[10px] px-3 border-b border-[#E2DDD8]">
+            <th className="font-medium py-[10px] px-3 border-b border-[#D6E4F0]">
               Status
             </th>
-            <th className="font-medium py-[10px] px-3 border-b border-[#E2DDD8]">
+            <th className="font-medium py-[10px] px-3 border-b border-[#D6E4F0]">
               Last active
             </th>
-            <th className="py-[10px] px-0 border-b border-[#E2DDD8]">
+            <th className="py-[10px] px-0 border-b border-[#D6E4F0]">
               <span className="sr-only">Actions</span>
             </th>
           </tr>
@@ -58,7 +58,7 @@ export const UsersTable: React.FC<UsersTableProps> = ({
             <tr>
               <td
                 colSpan={7}
-                className="py-12 text-center text-[#6B6560] border-b border-[#EFEBE7]"
+                className="py-12 text-center text-[#50677D] border-b border-[#E6EFF7]"
               >
                 No users found.
               </td>

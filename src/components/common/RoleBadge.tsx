@@ -7,9 +7,9 @@ export interface RoleBadgeProps {
 }
 
 const ROLE_CLASSES: Record<Role, string> = {
-  Administrator: 'bg-[#EEE5EC] text-[#5E3A57]',
-  Supervisor: 'bg-[#E3EEF8] text-[#1F4E79]',
-  Agent: 'bg-[#E6F1E9] text-[#25553A]',
+  Administrator: 'bg-[#E4E7FA] text-[#353F8F]',
+  Supervisor: 'bg-[#D6EAFB] text-[#174A7A]',
+  Agent: 'bg-[#DDF2F2] text-[#1D5C5E]',
 };
 
 export const RoleBadge: React.FC<RoleBadgeProps> = ({ role, className = '' }) => {

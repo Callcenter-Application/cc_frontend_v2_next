@@ -12,12 +12,12 @@ export const SidebarNavItem: React.FC<SidebarNavItemProps> = ({
   label,
   icon,
   isActive = false,
-  accent = '#6E4F68',
+  accent = '#2B7BC0',
   className = '',
 }) => {
   const activeClasses = isActive
-    ? 'bg-[#3A3538] text-white font-medium'
-    : 'text-[#C9C2C7] hover:text-white hover:bg-[#302B2E]';
+    ? 'bg-white text-[#10273D] font-medium'
+    : 'text-[#34536F] hover:text-[#10273D] hover:bg-[#C7DEF2]';
 
   return (
     <Link

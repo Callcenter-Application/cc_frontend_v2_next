@@ -8,7 +8,7 @@ export interface DashboardLayoutProps {
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
-    <div className="flex flex-wrap h-screen overflow-hidden font-sans text-[#1F1C1E] bg-[#F4F2EF]">
+    <div className="flex flex-wrap h-screen overflow-hidden font-sans text-[#10273D] bg-[#F0F6FC]">
       <SidebarComponent />
       <div className="flex-[999_1_560px] min-w-0 h-full min-h-0 box-border p-4 md:p-[16px_28px_28px] flex flex-col gap-4 overflow-hidden">
         <HeaderComponent />

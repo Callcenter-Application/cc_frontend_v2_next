@@ -19,7 +19,7 @@ export default function HomePage() {
         <div>
           <Link
             href="/dashboard/users"
-            className="inline-flex items-center h-10 px-4 rounded-lg bg-[#6E4F68] text-white text-[14px] font-medium no-underline hover:opacity-90 transition-opacity"
+            className="inline-flex items-center h-10 px-4 rounded-lg bg-[#2B7BC0] text-white text-[14px] font-medium no-underline hover:opacity-90 transition-opacity"
           >
             Go to Users
           </Link>

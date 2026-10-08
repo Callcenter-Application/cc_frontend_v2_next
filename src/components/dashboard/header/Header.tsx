@@ -26,7 +26,7 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <header
-      className={`flex flex-wrap items-center gap-3 min-h-[44px] shrink-0 p-[0_4px_12px] border-b border-[#E2DDD8] ${className}`}
+      className={`flex flex-wrap items-center gap-3 min-h-[44px] shrink-0 p-[0_4px_12px] border-b border-[#D6E4F0] ${className}`}
     >
       <HeaderSearch value={searchQuery} onChange={onSearchChange} />
       <div className="ml-auto flex items-center gap-2">

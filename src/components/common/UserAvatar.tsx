@@ -18,8 +18,8 @@ export const UserAvatar: React.FC<UserAvatarProps> = ({
 
   const variantClasses =
     variant === 'header'
-      ? 'w-[34px] h-[34px] rounded-full bg-[#D9CFD6] text-[#3F2D3C] text-[13px] font-semibold'
-      : 'w-[34px] h-[34px] shrink-0 rounded-full bg-[#EEE9ED] text-[#4F3A4B] text-[12px] font-semibold';
+      ? 'w-[34px] h-[34px] rounded-full bg-[#CFE3F5] text-[#14466F] text-[13px] font-semibold'
+      : 'w-[34px] h-[34px] shrink-0 rounded-full bg-[#E1EEF9] text-[#1E4A73] text-[12px] font-semibold';
 
   return (
     <div

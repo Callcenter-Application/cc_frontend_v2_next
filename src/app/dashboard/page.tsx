@@ -1,5 +1,6 @@
-import UsersView from '@/src/components/dashboard/users/UsersView';
+import HomePage from "./home/page";
+
 
 export default function DashboardPage() {
-  return <UsersView />;
+  return <HomePage />;
 }

@@ -21,7 +21,7 @@ export const HeaderSearch: React.FC<HeaderSearchProps> = ({
   return (
     <label
       htmlFor={id}
-      className={`flex-[1_1_260px] max-w-[420px] flex items-center gap-2 h-10 px-3 box-border bg-white border border-[#DDD7D1] rounded-lg text-[#6B6560] focus-within:border-[#6E4F68] transition-colors ${className}`}
+      className={`flex-[1_1_260px] max-w-[420px] flex items-center gap-2 h-10 px-3 box-border bg-white border border-[#C9DCEC] rounded-lg text-[#50677D] focus-within:border-[#2B7BC0] transition-colors ${className}`}
     >
       <SearchIcon className="w-4 h-4 shrink-0" />
       <input
@@ -30,7 +30,7 @@ export const HeaderSearch: React.FC<HeaderSearchProps> = ({
         value={value}
         onChange={(e) => onChange?.(e.target.value)}
         placeholder={placeholder}
-        className="border-0 outline-none flex-1 min-w-0 font-inherit text-[14px] bg-transparent text-[#1F1C1E] placeholder:text-[#6B6560]"
+        className="border-0 outline-none flex-1 min-w-0 font-inherit text-[14px] bg-transparent text-[#10273D] placeholder:text-[#50677D]"
       />
     </label>
   );
