@@ -24,7 +24,7 @@ export const SidebarNavItem: React.FC<SidebarNavItemProps> = ({
       href={href}
       aria-current={isActive ? 'page' : undefined}
       style={isActive ? { boxShadow: `inset 3px 0 0 ${accent}` } : undefined}
-      className={`flex items-center gap-[10px] min-h-[44px] px-3 rounded-lg text-[14px] no-underline transition-colors ${activeClasses} ${className}`}
+      className={`flex items-center gap-[10px] min-h-[44px] px-3 rounded-lg text-[14px] no-underline transition-[background-color,color,transform] active:scale-[0.98] ${activeClasses} ${className}`}
     >
       {icon && <span className="shrink-0">{icon}</span>}
       <span>{label}</span>

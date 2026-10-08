@@ -32,7 +32,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
         type="button"
         onClick={onActionClick}
         style={{ backgroundColor: accent }}
-        className="h-11 px-[18px] border-0 rounded-lg text-white font-medium text-[14px] cursor-pointer flex items-center gap-2 hover:opacity-90 active:opacity-95 transition-opacity"
+        className="h-11 px-[18px] border-0 rounded-lg text-white font-medium text-[14px] cursor-pointer flex items-center gap-2 hover:opacity-90 active:scale-[0.98] transition-[opacity,transform]"
       >
         <PlusIcon className="w-4 h-4 stroke-[2.2]" />
         <span>{actionLabel}</span>

@@ -32,7 +32,7 @@ export const RoleFilterTabs: React.FC<RoleFilterTabsProps> = ({
             type="button"
             onClick={() => onFilterChange(t.key)}
             aria-pressed={isActive}
-            className={`h-[38px] px-[14px] border-0 rounded-[6px] text-[14px] cursor-pointer inline-flex items-center gap-2 transition-colors select-none ${
+            className={`h-[38px] px-[14px] border-0 rounded-[6px] text-[14px] cursor-pointer inline-flex items-center gap-2 transition-[background-color,color,transform] select-none active:scale-[0.97] ${
               isActive
                 ? 'bg-white text-[#10273D] font-medium shadow-xs'
                 : 'bg-transparent text-[#34506A] hover:text-[#10273D]'

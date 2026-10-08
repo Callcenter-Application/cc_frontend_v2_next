@@ -44,11 +44,11 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
     <nav aria-label="Main" className={`flex flex-col gap-[2px] ${className}`}>
       {items.map((item) => {
         const { key, ...restItem } = item;
-        // Active if exact match or if at /dashboard and item is users (default view)
+        // Active if exact match or if at /dashboard and item is home (default view)
         const isActive =
           item.isActive ??
           (pathname === item.href ||
-            (pathname === '/dashboard' && item.key === 'users'));
+            (pathname === '/dashboard' && item.key === 'home'));
 
         return (
           <SidebarNavItem

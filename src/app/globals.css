@@ -27,3 +27,32 @@ body {
     color: #14466F;
   }
 }
+
+/* One-shot, non-interruptible confirmation — a row that was just created
+   fades from a tinted highlight back to transparent. */
+@keyframes row-highlight {
+  from {
+    background-color: rgba(43, 123, 192, 0.14);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+.row-highlight {
+  animation: row-highlight 1.6s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .row-highlight {
+    animation-duration: 0.001ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

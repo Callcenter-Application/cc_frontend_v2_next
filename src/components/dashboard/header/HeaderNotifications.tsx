@@ -19,7 +19,7 @@ export const HeaderNotifications: React.FC<HeaderNotificationsProps> = ({
       type="button"
       aria-label={ariaLabel}
       onClick={onClick}
-      className={`w-11 h-11 border-0 rounded-lg bg-transparent text-[#34506A] flex items-center justify-center cursor-pointer hover:bg-[#DCEBF8] transition-colors ${className}`}
+      className={`w-11 h-11 border-0 rounded-lg bg-transparent text-[#34506A] flex items-center justify-center cursor-pointer hover:bg-[#DCEBF8] active:scale-[0.94] transition-[background-color,transform] ${className}`}
     >
       <BellIcon className="w-5 h-5" />
     </button>

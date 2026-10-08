@@ -2,7 +2,9 @@ import type { Role, User } from '@/src/types/user.types';
 
 export const INITIAL_USERS: User[] = [
   {
-    name: 'Andrés Pérez',
+    firstname: 'Andrés',
+    lastname: 'Pérez',
+    password: '********',
     email: 'andres.perez@callbook.co',
     id: 'AG-1042',
     role: 'Agent',
@@ -11,7 +13,9 @@ export const INITIAL_USERS: User[] = [
     lastActive: 'Now',
   },
   {
-    name: 'Camila Rojas',
+    firstname: 'Camila',
+    lastname: 'Rojas',
+    password: '********',
     email: 'camila.rojas@callbook.co',
     id: 'AG-1057',
     role: 'Agent',
@@ -20,7 +24,9 @@ export const INITIAL_USERS: User[] = [
     lastActive: '6 min ago',
   },
   {
-    name: 'Natalia Herrera',
+    firstname: 'Natalia',
+    lastname: 'Herrera',
+    password: '********',
     email: 'natalia.herrera@callbook.co',
     id: 'SP-0210',
     role: 'Supervisor',
@@ -29,7 +35,9 @@ export const INITIAL_USERS: User[] = [
     lastActive: 'Now',
   },
   {
-    name: 'Felipe Martínez',
+    firstname: 'Felipe',
+    lastname: 'Martínez',
+    password: '********',
     email: 'felipe.martinez@callbook.co',
     id: 'AG-1063',
     role: 'Agent',
@@ -38,7 +46,9 @@ export const INITIAL_USERS: User[] = [
     lastActive: 'Now',
   },
   {
-    name: 'Ricardo Gómez',
+    firstname: 'Ricardo',
+    lastname: 'Gómez',
+    password: '********',
     email: 'ricardo.gomez@callbook.co',
     id: 'AD-0007',
     role: 'Administrator',
@@ -47,7 +57,9 @@ export const INITIAL_USERS: User[] = [
     lastActive: '12 min ago',
   },
   {
-    name: 'Valeria Sánchez',
+    firstname: 'Valeria',
+    lastname: 'Sánchez',
+    password: '********',
     email: 'valeria.sanchez@callbook.co',
     id: 'AG-1071',
     role: 'Agent',
@@ -56,7 +68,9 @@ export const INITIAL_USERS: User[] = [
     lastActive: 'Yesterday',
   },
   {
-    name: 'Jorge Castillo',
+    firstname: 'Jorge',
+    lastname: 'Castillo',
+    password: '********',
     email: 'jorge.castillo@callbook.co',
     id: 'SP-0214',
     role: 'Supervisor',
@@ -65,7 +79,9 @@ export const INITIAL_USERS: User[] = [
     lastActive: '20 min ago',
   },
   {
-    name: 'Paula Romero',
+    firstname: 'Paula',
+    lastname: 'Romero',
+    password: '********',
     email: 'paula.romero@callbook.co',
     id: 'AD-0011',
     role: 'Administrator',
@@ -75,12 +91,8 @@ export const INITIAL_USERS: User[] = [
   },
 ];
 
-export const getInitials = (name: string): string =>
-  name
-    .split(' ')
-    .filter(Boolean)
-    .map((part) => part[0])
-    .join('');
+export const getInitials = (firstname: string, lastname: string): string =>
+  `${firstname[0]}${lastname[0]}`;
 
 export const countByRole = (users: User[], role: Role): number =>
   users.filter((u) => u.role === role).length;

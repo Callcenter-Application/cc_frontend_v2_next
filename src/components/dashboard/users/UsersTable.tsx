@@ -1,20 +1,30 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import type { User } from '@/src/types/user.types';
 import { UsersTableRow } from './UsersTableRow';
 
 export interface UsersTableProps {
   users: User[];
-  onUserAction?: (user: User) => void;
+  highlightedId?: string | null;
   className?: string;
 }
 
 export const UsersTable: React.FC<UsersTableProps> = ({
   users,
-  onUserAction,
+  highlightedId = null,
   className = '',
 }) => {
+  const rowRefs = useRef<Map<string, HTMLTableRowElement>>(new Map());
+
+  useEffect(() => {
+    if (!highlightedId) return;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    rowRefs.current
+      .get(highlightedId)
+      ?.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+  }, [highlightedId]);
+
   return (
     <div
       className={`overflow-x-auto -mx-5 -mb-5 px-5 pb-2 ${className}`}
@@ -51,7 +61,11 @@ export const UsersTable: React.FC<UsersTableProps> = ({
               <UsersTableRow
                 key={user.id}
                 user={user}
-                onActionClick={onUserAction}
+                highlighted={user.id === highlightedId}
+                ref={(el) => {
+                  if (el) rowRefs.current.set(user.id, el);
+                  else rowRefs.current.delete(user.id);
+                }}
               />
             ))
           ) : (

@@ -1,7 +1,8 @@
-import { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import type { RoleFilter, User } from '@/src/types/user.types';
 import type { RoleTab, StatItem } from '@/src/types/stats.types';
-import { INITIAL_USERS, countByRole } from '@/src/data/users.data';
+import { countByRole } from '@/src/data/users.data';
+import { useUsersContext } from '@/src/contexts/UsersContext';
 
 export interface UseUsersFilterOptions {
   initialUsers?: User[];
@@ -9,10 +10,12 @@ export interface UseUsersFilterOptions {
 }
 
 export function useUsersFilter({
-  initialUsers = INITIAL_USERS,
+  initialUsers,
   defaultRoleFilter = 'All',
 }: UseUsersFilterOptions = {}) {
-  const [users, setUsers] = useState<User[]>(initialUsers);
+  const { users: contextUsers } = useUsersContext();
+  const users = initialUsers ?? contextUsers;
+
   const [roleFilter, setRoleFilter] = useState<RoleFilter>(defaultRoleFilter);
   const [searchQuery, setSearchQuery] = useState<string>('');
 
@@ -45,7 +48,8 @@ export function useUsersFilter({
       const q = searchQuery.toLowerCase().trim();
       result = result.filter(
         (u) =>
-          u.name.toLowerCase().includes(q) ||
+          u.firstname.toLowerCase().includes(q) ||
+          u.lastname.toLowerCase().includes(q) ||
           u.email.toLowerCase().includes(q) ||
           u.id.toLowerCase().includes(q) ||
           u.team.toLowerCase().includes(q)
@@ -57,7 +61,6 @@ export function useUsersFilter({
 
   return {
     users,
-    setUsers,
     roleFilter,
     setRoleFilter,
     searchQuery,

@@ -20,5 +20,5 @@ export const DEFAULT_NAV_ITEMS: Omit<NavItem, 'icon'>[] = [
 
 export const DEFAULT_QUEUE_HEALTH: QueueHealth = {
   title: 'Queue health',
-  statusText: 'All queues within SLA',
+  statusText: 'Queues within SLA',
 };
