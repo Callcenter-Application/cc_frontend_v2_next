@@ -1,5 +1,3 @@
-import {Dashboard} from "@/src/app/dashboard/dashboard";
+import DashboardPage from "./layout";
 
-export default function DashboardPage() {
-  return <Dashboard />;
-}
+export default DashboardPage;
