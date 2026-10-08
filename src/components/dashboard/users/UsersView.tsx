@@ -42,7 +42,7 @@ export const UsersView: React.FC<UsersViewProps> = ({
   }, [externalSearchQuery, setSearchQuery]);
 
   return (
-    <div className={`flex flex-col gap-4 ${className}`}>
+    <div className={`flex flex-col gap-4 h-full min-h-0 ${className}`}>
       {/* Page Header */}
       <PageHeader
         title="Users"
@@ -53,7 +53,7 @@ export const UsersView: React.FC<UsersViewProps> = ({
       />
 
       {/* Main card */}
-      <main className="flex-1 bg-white border border-[#E2DDD8] rounded-xl p-5 flex flex-col gap-5 min-w-0">
+      <main className="flex-1 min-h-0 overflow-y-auto bg-white border border-[#E2DDD8] rounded-xl p-5 flex flex-col gap-5 min-w-0 ">
         {/* Stats */}
         <StatsGrid stats={stats} />
 
