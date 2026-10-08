@@ -1,0 +1,50 @@
+'use client';
+
+import React from 'react';
+import type { RoleFilter } from '@/src/types/user.types';
+import type { RoleTab } from '@/src/types/stats.types';
+
+export interface RoleFilterTabsProps {
+  tabs: RoleTab[];
+  activeFilter: RoleFilter;
+  onFilterChange: (filter: RoleFilter) => void;
+  className?: string;
+}
+
+export const RoleFilterTabs: React.FC<RoleFilterTabsProps> = ({
+  tabs,
+  activeFilter,
+  onFilterChange,
+  className = '',
+}) => {
+  return (
+    <div
+      role="group"
+      aria-label="Filter by role"
+      className={`flex flex-wrap gap-1 bg-[#EAE6E2] rounded-lg p-[3px] self-start max-w-full ${className}`}
+    >
+      {tabs.map((t) => {
+        const isActive = activeFilter === t.key;
+
+        return (
+          <button
+            key={t.key}
+            type="button"
+            onClick={() => onFilterChange(t.key)}
+            aria-pressed={isActive}
+            className={`h-[38px] px-[14px] border-0 rounded-[6px] text-[14px] cursor-pointer inline-flex items-center gap-2 transition-colors select-none ${
+              isActive
+                ? 'bg-white text-[#1F1C1E] font-medium shadow-xs'
+                : 'bg-transparent text-[#4A4447] hover:text-[#1F1C1E]'
+            }`}
+          >
+            <span>{t.label}</span>
+            <span className="font-mono text-[12px] text-[#6B6560]">{t.count}</span>
+          </button>
+        );
+      })}
+    </div>
+  );
+};
+
+export default RoleFilterTabs;
